@@ -1,0 +1,250 @@
+:root {
+  /* Primary colors */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  /*  (circle) */
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+
+  --border-radius: 1rem 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+main {
+  background-color: var(--Pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 700px;
+  background-color: var(--White);
+  border-radius: var(--border-radius);
+  box-shadow: rgba(33, 26, 65, 0.2) 1px 1px 100px;
+  height: 450px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+}
+
+.result .title {
+  color: var(--Light-lavender);
+  font-size: 1.3rem;
+}
+
+.result .circle {
+  background: linear-gradient(
+    to bottom,
+    var(--Violet-blue),
+    var(--Persian-blue)
+  );
+  width: 60%;
+  height: 45%;
+  border-radius: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result .circle b {
+  font-size: 4rem;
+  color: var(--White);
+}
+
+.result .circle p {
+  font-size: 0.6rem;
+  color: var(--Light-lavender);
+  opacity: 60%;
+}
+
+.result .info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info h3 {
+  font-size: 1.5rem;
+  color: var(--White);
+}
+
+.info p {
+  width: 180px;
+  font-size: 0.7rem;
+  color: var(--Light-lavender);
+}
+
+.summary {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 20px;
+}
+.rows {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.summary h3 {
+  padding: 25px;
+  font-size: 1.3rem;
+  color: var(--Dark-gray-blue);
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  padding: 0.4rem 0.1rem;
+}
+
+.budge {
+  display: flex;
+  gap: 5px;
+  width: 100px;
+}
+.score {
+  display: inline-flex;
+}
+
+.card:nth-child(1) {
+  background-color: hsla(0, 100%, 67%, 0.1);
+  border-radius: 5% 5%;
+}
+
+.card:nth-child(1) .budge b {
+  color: var(--Light-red);
+}
+
+.card:nth-child(1) .score p {
+  color: var(--Dark-gray-blue);
+}
+
+.card:nth-child(2) {
+  background-color: hsla(39, 100%, 56%, 0.2);
+  border-radius: 5% 5%;
+}
+
+.card:nth-child(2) .budge b {
+  color: var(--Orangey-yellow);
+}
+
+.card:nth-child(2) .score p {
+  color: var(--Dark-gray-blue);
+}
+
+.card:nth-child(3) {
+  background-color: hsla(166, 100%, 37%, 0.2);
+  border-radius: 5% 5%;
+}
+
+.card:nth-child(3) .budge b {
+  color: var(--Green-teal);
+}
+
+.card:nth-child(3) .score p {
+  color: var(--Dark-gray-blue);
+}
+
+.card:nth-child(4) {
+  background-color: hsla(234, 85%, 45%, 0.2);
+  border-radius: 5% 5%;
+}
+
+.card:nth-child(4) .budge b {
+  color: var(--Cobalt-blue);
+}
+
+.card:nth-child(4) .score p {
+  color: var(--Dark-gray-blue);
+}
+
+.btn {
+  margin-top: auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  background: var(--Dark-gray-blue);
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+}
+.btn:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+}
+
+@media (max-width:550px) {
+  
+  .container {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+  
+  .result .title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .result {
+    width: auto;
+    height: 300px;
+  }
+
+  .result .circle b {
+    font-size: 3rem;
+  }
+
+  .summary {
+    width: auto;
+    text-align: center;
+  }
+  
+  .card {
+   width: auto;
+  }
+}
